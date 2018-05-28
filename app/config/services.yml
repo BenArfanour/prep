@@ -1,0 +1,10 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+
+    authentication.handler.login_success_handler:
+        class:  AppBundle\Redirection\LoginSuccessHandler
+        arguments:  ['@router', '@security.authorization_checker']
