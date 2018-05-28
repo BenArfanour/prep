@@ -3,32 +3,44 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Projet
+ *
+ * @ORM\Table(name="projet")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProjetRepository")
  */
 class Projet
 {
     /**
      * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="startdate", type="datetime")
      */
     private $startdate;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="endstart", type="datetime")
      */
-    private $enddate;
+    private $endstart;
 
 
     /**
@@ -44,14 +56,6 @@ class Projet
      */
 
     private $users;
-
-
-
-    public function  __construct()
-    {
-        $this->users = new ArrayCollection() ;
-    }
-
 
     /**
      * Get id
@@ -112,26 +116,91 @@ class Projet
     }
 
     /**
-     * Set enddate
+     * Set endstart
      *
-     * @param \DateTime $enddate
+     * @param \DateTime $endstart
      *
      * @return Projet
      */
-    public function setEnddate($enddate)
+    public function setEndstart($endstart)
     {
-        $this->enddate = $enddate;
+        $this->endstart = $endstart;
 
         return $this;
     }
 
     /**
-     * Get enddate
+     * Get endstart
      *
      * @return \DateTime
      */
-    public function getEnddate()
+    public function getEndstart()
     {
-        return $this->enddate;
+        return $this->endstart;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set client
+     *
+     * @param \AppBundle\Entity\Client $client
+     *
+     * @return Projet
+     */
+    public function setClient(\AppBundle\Entity\Client $client = null)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \AppBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Add user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Projet
+     */
+    public function addUser(\AppBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \AppBundle\Entity\User $user
+     */
+    public function removeUser(\AppBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
     }
 }
