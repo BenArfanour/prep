@@ -31,16 +31,17 @@ class Projet
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="startdate", type="datetime")
+     * @ORM\Column(name="startDate", type="date")
      */
-    private $startdate;
+    private $startDate;
+
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="endstart", type="datetime")
+     * @ORM\Column(name="endDate", type="date")
      */
-    private $endstart;
+    private $endDate;
 
 
     /**
@@ -51,16 +52,28 @@ class Projet
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", inversedBy="projets")
-     * @ORM\JoinTable(name="TimeSheet")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\TimeSheet" ,mappedBy="sheeets",cascade={"remove", "persist"})
      */
+    private  $projet;
 
-    private $users;
+
+
+
+
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->projet = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -92,58 +105,51 @@ class Projet
     }
 
     /**
-     * Set startdate
+     * Set startDate
      *
-     * @param \DateTime $startdate
+     * @param \DateTime $startDate
      *
      * @return Projet
      */
-    public function setStartdate($startdate)
+    public function setStartDate($startDate)
     {
-        $this->startdate = $startdate;
+        $this->startDate = $startDate;
 
         return $this;
     }
 
     /**
-     * Get startdate
+     * Get startDate
      *
      * @return \DateTime
      */
-    public function getStartdate()
+    public function getStartDate()
     {
-        return $this->startdate;
+        return $this->startDate;
     }
 
     /**
-     * Set endstart
+     * Set endDate
      *
-     * @param \DateTime $endstart
+     * @param \DateTime $endDate
      *
      * @return Projet
      */
-    public function setEndstart($endstart)
+    public function setEndDate($endDate)
     {
-        $this->endstart = $endstart;
+        $this->endDate = $endDate;
 
         return $this;
     }
 
     /**
-     * Get endstart
+     * Get endDate
      *
      * @return \DateTime
      */
-    public function getEndstart()
+    public function getEndDate()
     {
-        return $this->endstart;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+        return $this->endDate;
     }
 
     /**
@@ -171,36 +177,36 @@ class Projet
     }
 
     /**
-     * Add user
+     * Add projet
      *
-     * @param \AppBundle\Entity\User $user
+     * @param \AppBundle\Entity\TimeSheet $projet
      *
      * @return Projet
      */
-    public function addUser(\AppBundle\Entity\User $user)
+    public function addProjet(\AppBundle\Entity\TimeSheet $projet)
     {
-        $this->users[] = $user;
+        $this->projet[] = $projet;
 
         return $this;
     }
 
     /**
-     * Remove user
+     * Remove projet
      *
-     * @param \AppBundle\Entity\User $user
+     * @param \AppBundle\Entity\TimeSheet $projet
      */
-    public function removeUser(\AppBundle\Entity\User $user)
+    public function removeProjet(\AppBundle\Entity\TimeSheet $projet)
     {
-        $this->users->removeElement($user);
+        $this->projet->removeElement($projet);
     }
 
     /**
-     * Get users
+     * Get projet
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getUsers()
+    public function getProjet()
     {
-        return $this->users;
+        return $this->projet;
     }
 }

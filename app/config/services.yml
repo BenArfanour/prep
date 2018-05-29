@@ -5,6 +5,23 @@ parameters:
 
 services:
 
+    # Pour la redirection aprés l'authentification
     authentication.handler.login_success_handler:
         class:  AppBundle\Redirection\LoginSuccessHandler
         arguments:  ['@router', '@security.authorization_checker']
+
+
+    #
+    admin.user:
+        class: AppBundle\Admin\AdminUser
+        arguments: [~, AppBundle\Entity\User, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Employés }
+        public: true
+
+    admin.Projet:
+        class: AppBundle\Admin\AdminProjet
+        arguments: [~, AppBundle\Entity\Projet, ~]
+        tags:
+          - { name: sonata.admin, manager_type: orm, label: Projet }
+        public: true

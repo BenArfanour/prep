@@ -31,16 +31,17 @@ class Projet
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="startdate", type="datetime")
+     * @ORM\Column(name="startDate", type="date")
      */
-    private $startdate;
+    private $startDate;
+
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="endstart", type="datetime")
+     * @ORM\Column(name="endDate", type="date")
      */
-    private $endstart;
+    private $endDate;
 
 
     /**
@@ -51,92 +52,14 @@ class Projet
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", inversedBy="projets")
-     * @ORM\JoinTable(name="TimeSheet")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\TimeSheet" ,mappedBy="sheeets",cascade={"remove", "persist"})
      */
+    private  $projet;
 
-    private $users;
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
-    /**
-     * Set nom
-     *
-     * @param string $nom
-     *
-     * @return Projet
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
 
-        return $this;
-    }
 
-    /**
-     * Get nom
-     *
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
 
-    /**
-     * Set startdate
-     *
-     * @param \DateTime $startdate
-     *
-     * @return Projet
-     */
-    public function setStartdate($startdate)
-    {
-        $this->startdate = $startdate;
 
-        return $this;
-    }
-
-    /**
-     * Get startdate
-     *
-     * @return \DateTime
-     */
-    public function getStartdate()
-    {
-        return $this->startdate;
-    }
-
-    /**
-     * Set endstart
-     *
-     * @param \DateTime $endstart
-     *
-     * @return Projet
-     */
-    public function setEndstart($endstart)
-    {
-        $this->endstart = $endstart;
-
-        return $this;
-    }
-
-    /**
-     * Get endstart
-     *
-     * @return \DateTime
-     */
-    public function getEndstart()
-    {
-        return $this->endstart;
-    }
 }
-

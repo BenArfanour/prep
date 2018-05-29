@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Client
  *
@@ -28,13 +29,18 @@ class Client
      */
     private $nom;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pays", type="string", length=255)
+     */
+    private $pays;
+
 
     /**
-    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Projet",mappedBy="client",cascade={"remove", "persist"})
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Projet",mappedBy="client",cascade={"remove", "persist"})
      */
-
-   private  $projets;
-
+    private $projets;
 
     /**
      * Get id
@@ -69,13 +75,31 @@ class Client
     {
         return $this->nom;
     }
+
     /**
-     * Constructor
+     * Set pays
+     *
+     * @param string $pays
+     *
+     * @return Client
      */
-    public function __construct()
+    public function setPays($pays)
     {
-        $this->projets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->pays = $pays;
+
+        return $this;
     }
+
+    /**
+     * Get pays
+     *
+     * @return string
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
 
     /**
      * Add projet
@@ -110,4 +134,12 @@ class Client
     {
         return $this->projets;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->projets = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 }
