@@ -13,7 +13,6 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\CoreBundle\Form\Type\DatePickerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
@@ -23,12 +22,21 @@ class AdminUser  extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
             {
                 $formMapper
+
                     ->with('Nouveau Employé', ['class' => 'col-md-6'])
 
+                             ->add('username',TextType::class)
                              ->add('nom',TextType::class)
                              ->add('prenom',TextType::class)
                              ->add('email',TextType::class)
-                             ->add('datenaissance',DatePickerType::class,array('label'=>'Date de Naissance','dp_use_current'=> false,))
+                             ->add('datenaissance','sonata_type_date_picker', array(
+                                 'label'=>'Date de Naissance',
+                                 'dp_language'=>'fr',
+                                 'format'=>'dd/MM/yyyy'
+                             ))
+                    ->end()
+                    ->with('Mot de Passe ', ['class' => 'col-md-6'])
+
                              ->add('plainPassword', 'repeated', array(
                                  'type' => 'password',
                                  'options' => array('translation_domain' => 'FOSUserBundle'),
@@ -36,6 +44,7 @@ class AdminUser  extends AbstractAdmin
                                  'second_options' => array('label' => 'form.password_confirmation'),
                                  'invalid_message' => 'fos_user.password.mismatch',
                                 ))
+
                     ->end();
             }
 
@@ -46,6 +55,15 @@ class AdminUser  extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
 
     {
+        $listMapper
+            ->add('nom',TextType::class)
+            ->add('prenom',TextType::class)
+            ->add('datenaissance', 'date', array(
+                'pattern' => 'dd MMM y G',
+                'locale' => 'fr',
+                'timezone' => 'Europe/Paris',
+            ))
+            ->add('email',TextType::class);
 
     }
 

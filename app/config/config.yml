@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi: ~
-    translator: ~
+    translator: { fallback: fr }
     secret: '%secret%'
     router:
         resource: '%kernel.root_dir%/config/routing.yml'
@@ -81,3 +81,11 @@ fos_user:
     from_email:
         address: "nour.benarfa@abshore.com"
         sender_name: "%Nour Ben Arfa%"
+
+
+sonata_admin:
+    title :              Abshore
+    title_logo:          images/abshore.png
+
+
+

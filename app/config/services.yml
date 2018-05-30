@@ -25,3 +25,10 @@ services:
         tags:
           - { name: sonata.admin, manager_type: orm, label: Projet }
         public: true
+
+    admin.Client:
+        class: AppBundle\Admin\AdminClient
+        arguments: [~, AppBundle\Entity\Client, ~]
+        tags:
+          - { name: sonata.admin, manager_type: orm, label: Client }
+        public: true
