@@ -35,7 +35,7 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
         if ($this->authorizationChecker->isGranted('ROLE_ADMIN')) {
             $response = new RedirectResponse($this->router->generate('sonata_admin_dashboard'));
         } else if ($this->authorizationChecker->isGranted('ROLE_USER')) {
-            $response = new RedirectResponse($this->router->generate('frontend'));
+            $response = new RedirectResponse($this->router->generate('calendar'));
         }
 
         return $response;

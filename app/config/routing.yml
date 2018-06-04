@@ -14,3 +14,14 @@ _sonata_admin:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+
+fados_fullcalendar:
+    resource: "@fullCalendarBundle/Resources/config/routing.xml"
+
+calendar:
+    path:    /
+    defaults: {_controller: AppBundle:TimeSheet:Calendar}

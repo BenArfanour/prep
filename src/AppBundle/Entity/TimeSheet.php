@@ -9,6 +9,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use fadosProduccions\fullCalendarBundle\Entity\Event as BaseEvent;
 
 
 
@@ -18,7 +19,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="TimeSheet")
  */
-class TimeSheet
+class TimeSheet extends BaseEvent
 {
 
 
@@ -55,12 +56,6 @@ class TimeSheet
      private $time ;
 
 
-    /**
-     * @var date
-     *
-     * @ORM\Column(name="date", type="date", length=255)
-     */
-    private $date ;
 
     /**
      * @var string
@@ -108,29 +103,7 @@ class TimeSheet
         return $this->time;
     }
 
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return TimeSheet
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
 
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
 
     /**
      * Set type

@@ -27,8 +27,13 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
             // And finally
-            new Sonata\AdminBundle\SonataAdminBundle(),
+           new Sonata\AdminBundle\SonataAdminBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+
+            //calendar bundle
+            new fadosProduccions\fullCalendarBundle\fullCalendarBundle(),
+            // js routing
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

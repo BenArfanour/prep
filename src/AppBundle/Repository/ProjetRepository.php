@@ -10,4 +10,14 @@ namespace AppBundle\Repository;
  */
 class ProjetRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getUsers($data) {
+
+        $query = $this->createQueryBuilder('p')
+                      ->where('p.nom = :data')
+                      ->setParameter('data', $data)
+                      ->getQuery();
+
+
+        return $query->getQuery()->getResult();
+    }
 }

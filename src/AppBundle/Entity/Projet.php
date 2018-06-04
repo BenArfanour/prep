@@ -209,4 +209,9 @@ class Projet
     {
         return $this->projet;
     }
+
+    public function __toString()
+    {
+        return $this->getNom();
+    }
 }

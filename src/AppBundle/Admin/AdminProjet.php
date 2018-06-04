@@ -35,9 +35,9 @@ class AdminProjet extends AbstractAdmin
                 'format'=>'dd/MM/yyyy'
             ))
             ->add('endDate','sonata_type_date_picker', array(
-                'label'=>'Date de fin',
-                'dp_language'=>'fr',
-                'format'=>'dd/MM/yyyy'
+                  'label'=>'Date de fin',
+                  'dp_language'=>'fr',
+                  'format'=>'dd/MM/yyyy'
             ))
 
             ->end()

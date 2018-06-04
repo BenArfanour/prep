@@ -60,6 +60,7 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -86,6 +87,11 @@ fos_user:
 sonata_admin:
     title :              Abshore
     title_logo:          images/abshore.png
+
+
+full_calendar:
+     class_manager: AppBundle\Entity\TimeSheet
+
 
 
 

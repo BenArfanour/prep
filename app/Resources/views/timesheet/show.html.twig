@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Timesheet</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ timeSheet.id }}</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{{ timeSheet.time }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ timeSheet.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('timesheet_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('timesheet_edit', { 'id': timeSheet.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
