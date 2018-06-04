@@ -3,8 +3,10 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 class TimeSheetType extends AbstractType
 {
@@ -26,8 +28,22 @@ class TimeSheetType extends AbstractType
                   'multiple' => false,
                   'label'    => 'Porjet',
                  ))
-                 ->add('startDatetime','datetime')
-                 ->add('endDatetime','datetime');
+                 ->add('startDatetime',DateType::class,
+                      array(
+                          'widget' => 'single_text',
+                          'html5' => false,
+                          'attr' => ['class' => 'js-datepicker'],
+
+                      ))
+                 ->add('endDatetime',DateType::class,
+
+                      array(
+
+                        'widget' => 'single_text',
+                        'html5' => false,
+                        'attr' => ['class' => 'js-datepicker'],
+
+                     ));
 
     }/**
      * {@inheritdoc}
