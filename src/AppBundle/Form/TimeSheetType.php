@@ -6,7 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\DateTime;
+
+
 
 class TimeSheetType extends AbstractType
 {
@@ -15,35 +16,34 @@ class TimeSheetType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder ->add('time')
+        $builder
                  ->add('type','choice', array(
-                 'choices'=> array ('Congé'=>'Congé' , 'Maladie'=>'Maladie' ,'Férié'=>'Férié'),
-                'expanded' => true,
-                'multiple' =>  false,
+                  'choices'=> array ('Congé'=>'Congé' , 'Maladie'=>'Maladie' ,'Férié'=>'Férié'),
+                  'expanded' => true,
+                  'multiple' =>  false,
+                   'label' => 'Type :'
                      ))
+
                  ->add('sheeets', 'entity', array(
                   'class' => 'AppBundle\Entity\Projet',
                   'property' => 'nom',
                   'expanded' => false,
                   'multiple' => false,
-                  'label'    => 'Porjet',
+                  'label'    => 'Porjet :',
                  ))
-                 ->add('startDatetime',DateType::class,
-                      array(
-                          'widget' => 'single_text',
-                          'html5' => false,
-                          'attr' => ['class' => 'js-datepicker'],
 
-                      ))
-                 ->add('endDatetime',DateType::class,
 
-                      array(
+               ->add('startDatetime',DateType::class , array (
+                          'widget'=>'single_text',
+                          'label' => 'Date de Début :',
+                          ))
 
-                        'widget' => 'single_text',
-                        'html5' => false,
-                        'attr' => ['class' => 'js-datepicker'],
 
-                     ));
+
+              ->add('endDatetime',DateType::class , array (
+                'widget'=>'single_text',
+                'label' => 'Date de Fin :',
+            ));
 
     }/**
      * {@inheritdoc}

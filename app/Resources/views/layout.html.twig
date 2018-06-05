@@ -1,0 +1,9 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+
+{% block side_bar_nav %}
+    {% if app.user and is_granted('ROLE_SONATA_ADMIN') %}
+        {{ knp_menu_render('sonata_admin_sidebar', {template: sonata_admin.adminPool.getTemplate('knp_menu_template')}) }}
+    {% endif %}
+{% endblock side_bar_nav %}
+

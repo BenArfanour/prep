@@ -38,6 +38,8 @@ twig:
         resources:
             - 'SonataCoreBundle:Form:datepicker.html.twig'
 
+    form_themes: ['bootstrap_3_layout.html.twig']
+
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -87,6 +89,10 @@ fos_user:
 sonata_admin:
     title :              Abshore
     title_logo:          images/abshore.png
+    templates:
+          layout:                  ::layout.html.twig
+
+
 
 
 full_calendar:

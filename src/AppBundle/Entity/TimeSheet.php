@@ -42,25 +42,21 @@ class TimeSheet extends BaseEvent
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Projet" ,inversedBy="projet",cascade={"remove", "persist"})
-     * @ORM\JoinColumn(name="id_projet",referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_projet",referencedColumnName="id",nullable=true)
      */
     private $sheeets ;
 
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="time", type="integer", length=255)
-     */
 
-     private $time ;
+
+
 
 
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255)
+     * @ORM\Column(name="type", type="string", length=255,nullable=true)
      */
      private $type ;
 
@@ -79,29 +75,9 @@ class TimeSheet extends BaseEvent
         return $this->id;
     }
 
-    /**
-     * Set time
-     *
-     * @param integer $time
-     *
-     * @return TimeSheet
-     */
-    public function setTime($time)
-    {
-        $this->time = $time;
 
-        return $this;
-    }
 
-    /**
-     * Get time
-     *
-     * @return integer
-     */
-    public function getTime()
-    {
-        return $this->time;
-    }
+
 
 
 
@@ -176,4 +152,27 @@ class TimeSheet extends BaseEvent
     {
         return $this->sheeets;
     }
+
+
+    public function toArray()
+    {
+        return array(
+            'id'               => $this->id,
+            'title'            => $this->sheets->getNom(),
+            'start'            => $this->startDatetime->format("Y-m-d H:i:sP"),
+            'end'              => $this->endDatetime->format("Y-m-d  H:i:sP"),
+            'backgroundColor'  => $this->bgColor,
+            'borderColor'      => $this->bgColor,
+            'textColor'        => $this->fgColor,
+            'className'        => $this->cssClass,
+            'allDay'           => $this->allDay,
+            'type'             =>$this->type,
+            //'id_projet'        =>$this->sheeets->getNom() ,
+            //'id_utilisateur '  =>$this->sheeets->getNom(),
+
+        );
+    }
+
+
+
 }

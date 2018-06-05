@@ -171,4 +171,11 @@ class User extends BaseUser
     {
         return $this->user;
     }
+
+    public function __toString()
+    {
+        return 'ok';
+    }
+
+
 }
