@@ -1,12 +1,28 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 
-    $(document).ready(function(){
-        if ($('#appbundle_timesheet_type_0').is(':checked'))
-        {
-            alert("it's checked");
-        }
-    });
+        var update = function () {
+            $("#appbundle_timesheet_type_0").is(":checked") ;
+             var c1 = $('input[name=appbundle_timesheet[type]]:checked').val()
+             var c2 = $("#appbundle_timesheet_type_1").is(":checked") ;
+             var c3 = $("#appbundle_timesheet_type_2").is(":checked") ;
 
+
+        if (c1 || c2 || c3) {
+
+            $("#appbundle_timesheet_sheeets").attr("disabled", "disabled");
+        }
+        else {
+            $("#appbundle_timesheet_sheeets").attr("disabled", false);
+        }
+
+    };
+
+              $(update);
+
+              $("#appbundle_timesheet_type").change(update);
 
 </script>
 
