@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a474380-da0f-4d06-be4e-4231b3be8622" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Timesheet/dayclick.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Timesheet/dayclick.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/timesheet/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/timesheet/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/TimeSheetType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/TimeSheetType.php" afterDir="false" />
-    </list>
+    <list default="true" id="6a474380-da0f-4d06-be4e-4231b3be8622" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dayclick.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dayclick.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Timesheet/dayclick.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="54">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -52,11 +47,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calendar.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Timesheet/calendar.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="126">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="e#1289#1319#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -283,6 +281,56 @@
               <item name="prep" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fados-produccions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fados-produccions" type="462c0819:PsiDirectoryNode" />
+              <item name="full-calendar-bundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fados-produccions" type="462c0819:PsiDirectoryNode" />
+              <item name="full-calendar-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="fadosProduccions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fados-produccions" type="462c0819:PsiDirectoryNode" />
+              <item name="full-calendar-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="fadosProduccions" type="462c0819:PsiDirectoryNode" />
+              <item name="fullCalendarBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fados-produccions" type="462c0819:PsiDirectoryNode" />
+              <item name="full-calendar-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="fadosProduccions" type="462c0819:PsiDirectoryNode" />
+              <item name="fullCalendarBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prep" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -335,12 +383,12 @@
       <workItem from="1528183021662" duration="9330000" />
       <workItem from="1528192478529" duration="4072000" />
       <workItem from="1528196844354" duration="56000" />
-      <workItem from="1528275957941" duration="14861000" />
+      <workItem from="1528275957941" duration="16095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103499000" />
+    <option name="totallyTimeSpent" value="104733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -352,7 +400,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Run" order="8" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23904689" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22444274" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -370,29 +418,6 @@
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" order="13" visible="true" weight="0.08283132" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="8" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="2" sideWeight="0.87855494" weight="0.0" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.121445045" side_tool="true" weight="0.0" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24750192" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -418,13 +443,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/AdminUser.php">
@@ -612,13 +630,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Resources/public/demos/basic-views.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Resources/public/demos/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/init.fullCalendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
@@ -734,24 +745,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Twig/fullCalendarExtension.php">
+    <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Resources/public/demos/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Timesheet/calendar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="306">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Timesheet/dayclick.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="54">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Twig/fullCalendarExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/fados-produccions/full-calendar-bundle/fadosProduccions/fullCalendarBundle/Controller/CalendarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Timesheet/calendar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#1289#1319#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
