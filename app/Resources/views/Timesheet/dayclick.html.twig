@@ -1,30 +1,30 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script>
+{#<script>#}
 
-        var update = function () {
-            $("#appbundle_timesheet_type_0").is(":checked") ;
-             var c1 = $('input[name=appbundle_timesheet[type]]:checked').val()
-             var c2 = $("#appbundle_timesheet_type_1").is(":checked") ;
-             var c3 = $("#appbundle_timesheet_type_2").is(":checked") ;
+        {#var update = function () {#}
+            {#$("#appbundle_timesheet_type_0").is(":checked") ;#}
+            {#var c1 = $("#appbundle_timesheet_type_0").prop("checked", true);#}
+             {#var c2 = $("#appbundle_timesheet_type_0").prop("checked", true); ;#}
+             {#var c3 = $("#appbundle_timesheet_type_2").is(":checked") ;#}
 
 
-        if (c1 || c2 || c3) {
+        {#if (c1 || c2 || c3) {#}
 
-            $("#appbundle_timesheet_sheeets").attr("disabled", "disabled");
-        }
-        else {
-            $("#appbundle_timesheet_sheeets").attr("disabled", false);
-        }
+            {#$("#appbundle_timesheet_sheeets").attr("disabled", "disabled");#}
+        {#}#}
+        {#else {#}
+            {#$("#appbundle_timesheet_sheeets").attr("disabled", false);#}
+        {#}#}
 
-    };
+    {#};#}
 
-              $(update);
+              {#$(update);#}
 
-              $("#appbundle_timesheet_type").change(update);
+              {#$("#appbundle_timesheet_type").change(update);#}
 
-</script>
+{#</script>#}
 
 <div id="calendarModal" class="modal fade">
     <div class="modal-dialog">
